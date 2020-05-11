@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Big Baller Island Hop",
+"productVersion": "1.0",
+"dataUrl": "BigBaller.data.unityweb",
+"wasmCodeUrl": "BigBaller.wasm.code.unityweb",
+"wasmFrameworkUrl": "BigBaller.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": true,
+"multithreading": false,
+"unityVersion": "2019.2.1f1"
+}
