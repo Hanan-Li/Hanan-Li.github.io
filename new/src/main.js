@@ -27,6 +27,16 @@ window.addEventListener("load", function(event) {
     display.render();
   };
 
+  var touch = function(event){
+    if(event.type === "touchstart"){
+      var touch = event.touches[0];
+      controller.GetTouchInput(event.type, touch.clientX, display.context);
+    }
+    else if(event.type === "touchend"){
+      controller.GetTouchInput(event.type, 0, display.context);
+    }
+    
+  }
   var render = function() {
     display.fill(game.world.background_color); // Clear background to game's background color.
     display.drawRectangle(
@@ -186,7 +196,11 @@ window.addEventListener("load", function(event) {
       game.world.player.jump();
       controller.up.active = false;
     }
-
+    if (controller.touch.active){
+      game.world.player.x = controller.touch.x;
+      game.world.player.jump();
+      controller.touch.active = false;
+    }
     game.update();
   };
 
@@ -212,6 +226,8 @@ window.addEventListener("load", function(event) {
   window.addEventListener("keydown", keyDownUp);
   window.addEventListener("keyup", keyDownUp);
   window.addEventListener("resize", resize);
+  window.addEventListener("touchstart", touch);
+  window.addEventListener("touchend", touch);
 
   resize();
 

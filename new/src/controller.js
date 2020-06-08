@@ -2,6 +2,7 @@ const Controller = function() {
   this.left = new Controller.ButtonInput();
   this.right = new Controller.ButtonInput();
   this.up = new Controller.ButtonInput();
+  this.touch = new Controller.TouchInput();
 
   this.keyDownUp = function(type, key_code) {
     var down = type === "keydown" ? true : false;
@@ -16,6 +17,18 @@ const Controller = function() {
         break;
       case 39:
         this.right.getInput(down);
+    }
+  };
+
+  this.GetTouchInput = function(type, x, canvas){
+    var rect = canvas.getBoundingClientRect();
+    var size = rect.right - rect.left;
+    var scaledX = 256 * (x - rect.left) / size;
+    if(type === "touchstart"){
+      this.touch.getInput(scaledX, true);
+    }
+    else if(type === "touchend"){
+      this.touch.getInput(scaledX, false);
     }
   };
 };
@@ -36,3 +49,22 @@ Controller.ButtonInput.prototype = {
     this.down = down;
   }
 };
+
+Controller.TouchInput = function() {
+  this.active = false;
+  this.x = 0;
+}
+
+Controller.TouchInput.prototype = {
+  constructor: Controller.TouchInput,
+
+  getInput: function(x, active) {
+    if(active){
+      this.x = x;
+      this.active = active;
+    }
+    else{
+      this.active = active;
+    }
+  }
+}
