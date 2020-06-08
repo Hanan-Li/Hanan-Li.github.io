@@ -9,7 +9,7 @@ const Display = function(canvas) {
 
   this.drawText = function(text, color, x, y) {
     this.buffer.fillStyle = color;
-    this.buffer.font = "20px Courier New";
+    this.buffer.font = "25px Courier New";
     this.buffer.textAlign = "center";
     this.buffer.fillText(text, x,y);
 
@@ -18,6 +18,14 @@ const Display = function(canvas) {
   this.drawText2 = function(text, color, x, y) {
     this.buffer.fillStyle = color;
     this.buffer.font = "13px Courier New";
+    this.buffer.textAlign = "center";
+    this.buffer.fillText(text, x,y);
+
+  };
+
+  this.drawText3 = function(text, color, x, y) {
+    this.buffer.fillStyle = color;
+    this.buffer.font = "12px Courier New";
     this.buffer.textAlign = "center";
     this.buffer.fillText(text, x,y);
 

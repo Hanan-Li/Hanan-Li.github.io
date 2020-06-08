@@ -166,6 +166,12 @@ window.addEventListener("load", function(event) {
       game.world.resumeText.x,
       game.world.resumeText.y
     )
+    display.drawText3(
+      game.world.subtitle.content,
+      game.world.subtitle.color,
+      game.world.subtitle.x,
+      game.world.subtitle.y
+    )
     display.render();
   };
 
