@@ -27,7 +27,7 @@ const Game = function() {
     bgPlayer15: new Game.BgPlayer(2,1),
 
     title: new Game.Text("Hanan Li", 36*1.3),
-    subtitle: new Game.Text("(ARROW KEYS TO MOVE)", 36*1.8),
+    subtitle: new Game.Text("(TAP SCREEN OR ARROW KEYS TO MOVE)", 36*1.8),
     aboutText: new Game.CollideText("About", 64, 36*2.5, 10,1, "/new/about/"),
     projectText: new Game.CollideText("Projects", 64*2, 36*2.5, 10,1, "/new/projects"),
     resumeText: new Game.CollideText("Résumé", 64*3, 36*2.5, 10,1, "/new/Hanan_Li_Resume_2020.pdf"),
