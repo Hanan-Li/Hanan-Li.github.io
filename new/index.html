@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hanan Li</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="user-scalable=no,width=device-width" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+  
+  
+  </head>
+
+  <body>
+    <div class="container-fluid fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-custom ">
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbar">
+          <div class="navbar-nav  nav-justified">
+            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">About</a>
+            <a class="nav-item nav-link" href="#">Projects</a>
+            <a class="nav-item nav-link" href="#">Résumé</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <canvas></canvas>
+
+    <script type = "text/javascript">
+
+
+      /* Added on 03/09/2018 to allow reusing scripts from previous parts. */
+      let parts = ["src/controller.js", "src/display.js", "src/engine.js", "src/game.js", "src/main.js"];
+
+      for (let index = 0; index < parts.length; index ++) {
+
+        let script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        script.setAttribute("src", parts[index]);
+        document.head.appendChild(script);
+
+      }
+
+
+    </script>
+  </body>
+</html>
