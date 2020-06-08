@@ -24,7 +24,7 @@ const Controller = function() {
     
     if(type === "touchstart"){
       var rect = canvas.getBoundingClientRect();
-      if(y < rect.top){
+      if(y > rect.top){
         var size = rect.right - rect.left;
         var scaledX = 256 * (x - rect.left) / size;
         this.touch.getInput(scaledX, true);
