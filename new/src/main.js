@@ -30,12 +30,11 @@ window.addEventListener("load", function(event) {
   var touch = function(event){
     console.log(event.type);
     if(event.type === "touchstart"){
-      console.log("touched");
       var touch = event.touches[0];
       controller.GetTouchInput(event.type, touch.clientX, document.querySelector("canvas"));
     }
     else if(event.type === "touchend"){
-      controller.GetTouchInput(event.type, 0, display.context);
+      controller.GetTouchInput(event.type, 0, document.querySelector("canvas"));
     }
     
   }

@@ -21,16 +21,15 @@ const Controller = function() {
   };
 
   this.GetTouchInput = function(type, x, canvas){
-    var rect = canvas.getBoundingClientRect();
-    console.log(x);
-    var size = rect.right - rect.left;
-    var scaledX = 256 * (x - rect.left) / size;
-    console.log(scaledX);
+    
     if(type === "touchstart"){
+      var rect = canvas.getBoundingClientRect();
+      var size = rect.right - rect.left;
+      var scaledX = 256 * (x - rect.left) / size;
       this.touch.getInput(scaledX, true);
     }
     else if(type === "touchend"){
-      this.touch.getInput(scaledX, false);
+      this.touch.getInput(0, false);
     }
   };
 };
