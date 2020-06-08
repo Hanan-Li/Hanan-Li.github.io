@@ -17,6 +17,7 @@ body {
   justify-items: center;
   height: 100%;
   width: 100%;
+  font-family: "Courier New";
 }
 
 .navbar-custom { 
