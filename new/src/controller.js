@@ -22,8 +22,10 @@ const Controller = function() {
 
   this.GetTouchInput = function(type, x, canvas){
     var rect = canvas.getBoundingClientRect();
+    console.log(x);
     var size = rect.right - rect.left;
     var scaledX = 256 * (x - rect.left) / size;
+    console.log(scaledX);
     if(type === "touchstart"){
       this.touch.getInput(scaledX, true);
     }
