@@ -1,7 +1,7 @@
 let i = 0;
 let rev = 0;
 let parts = 0;
-let pretext = "I'm a "
+let pretext = "the "
 let txts = ["Software Engineer.", "Game Developer.", "Mediocre Guitarist."] 
 
 let speed = 80;
@@ -22,7 +22,7 @@ function typeWriter() {
     }
     else if(rev > 0){
         rev--;
-        document.getElementById("typewrite").innerHTML = txt.substring(0, rev);
+        document.getElementById("typewrite").innerHTML = pretext + txt.substring(0, rev);
         
         setTimeout(typeWriter, speed);
         
@@ -38,7 +38,7 @@ function typeWriter() {
 window.addEventListener('load', (event) => {
     let txt = txts[parts];
     if (i < txt.length) {
-        //document.getElementById("typewrite").innerHTML = pretext;
+        document.getElementById("typewrite").innerHTML = pretext;
         document.getElementById("typewrite").innerHTML += txt.charAt(i);
         i++;
         console.log("hey");
