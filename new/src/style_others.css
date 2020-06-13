@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    
+    color: white;
+    height: 100%;
+    width: 100%;
+    font-family: "Courier New";
+  }
+  
+  .navbar-custom { 
+    background-color: #202830; 
+  } 
+  
+  .btn-circle {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  .link {
+    color: white;
+  }
+
+  .link:hover {
+    color: grey;
+    cursor: default;
+    -webkit-transition:color 0.1s ease-in; 
+  }
+
+  .link:active {
+    color: #202830;
+  }
+
+  section {
+    height: 100%;
+    width: 100%;
+    background: #202830;
+  }
+
+  
+  .container-custom {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    background: #202830;
+    height: 90%;
+    width: 100%;
+    
+  }
+
+  .container-leftover {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    background: #202830;
+    white-space: nowrap;
+    height: 10%;
+    width: 100%;
+  }
+
+  .typewriter h2 {
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+      blink-caret .75s step-end infinite;
+  }
+  
+  .center-text {
+      text-align: center;
+  }
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }

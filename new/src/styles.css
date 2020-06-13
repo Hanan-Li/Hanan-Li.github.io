@@ -10,10 +10,10 @@ html {
 }
 
 body {
-  align-content: center;
   align-items: space-around;
   background-color: #202830;
   display: grid;
+  align-content: center;
   justify-items: center;
   height: 100%;
   width: 100%;
