@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    align-items: space-around;
+    background-color: #202830;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    height: 100%;
+    width: 100%;
+    font-family: "Courier New";
+  }
+  
+  .navbar-custom { 
+    background-color: #202830; 
+  } 
+  
+  /* 04/07/2018 */
+  
+  canvas {
+    image-rendering: pixelated;
+  }
+  
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #202830;
+  }
+  
+  .card:hover .overlay {
+    opacity: 0.9;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
