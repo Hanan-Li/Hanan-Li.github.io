@@ -1,7 +1,7 @@
 let i = 0;
 let rev = 0;
 let parts = 0;
-let pretext = "I'm a "
+let pretext = "A "
 let txts = ["Software Engineer.", "Game Developer.", "Mediocre Guitarist."] 
 
 let speed = 80;
