@@ -59,7 +59,9 @@
     background: #202830;
     height: 90%;
     width: 100%;
-    
+    animation: fadeInAnimation ease 2s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
   }
 
   .container-leftover {
@@ -70,6 +72,9 @@
     white-space: nowrap;
     height: 10%;
     width: 100%;
+    animation: fadeInAnimation ease 2s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
   }
 
   .typewriter h2 {
