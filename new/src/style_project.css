@@ -8,18 +8,39 @@
     height: 100%;
     width: 100%;
   }
-  
+
   body {
-    align-items: space-around;
     background-color: #202830;
-    display: grid;
-    align-content: center;
-    justify-items: center;
     height: 100%;
     width: 100%;
     font-family: "Courier New";
   }
-  
+  .container-leftover {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    background: #202830;
+    white-space: nowrap;
+    height: 10%;
+    width: 100%;
+  }
+  .container-custom {
+
+    background: #202830;
+    height: 90%;
+    width: 100%;
+    
+  }
+  .center {
+    text-align: center;
+  }
+  .container-center {
+    margin: auto;
+    width: 50%;
+  }
+  .container-item {
+      margin: auto
+  }
   .navbar-custom { 
     background-color: #202830; 
   } 
