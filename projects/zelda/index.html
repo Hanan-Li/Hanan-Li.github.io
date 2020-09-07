@@ -12,10 +12,10 @@
   
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="TemplateData/UnityProgress.javascript"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/web.json", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/webgl.json", {onProgress: UnityProgress});
     </script>
   </head>
 
@@ -52,14 +52,13 @@
     
     <div class="container-leftover"></div>
     <div class="fader">
-      <div class="webgl-content">
-        <div id="unityContainer" style="width: 256px; height: 240px"></div>
-        <div class="footer">
-          <div class="webgl-logo"></div>
-          <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-          <div class="title">Legend of Zelda</div>
+      <div class="container">
+        <div class="webgl-content">
+          <div id="gameContainer" style="width: 256px; height: 240px"></div>
         </div>
+        <script src="TemplateData/responsive.javascript"></script>
       </div>
+     
       <div class="container">
         <h2>Classic NES Legend of Zelda</h2>
         <p>Clone of the first dungeon of the classic NES version of Legend of Zelda</p>
