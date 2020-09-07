@@ -10,12 +10,24 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <link href="/src/style_project.css" rel="stylesheet" type="text/css" />
   
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+
+    <!-- unity resources -->
     <script src="Build/UnityLoader.js"></script>
+
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/webgl.json", {onProgress: UnityProgress});
+      // instantiate webgl only if we're not on a touch device
+
+      var isTouch = ('ontouchstart' in document.documentElement);
+
+      if ( !isTouch ) {
+        var unityInstance = UnityLoader.instantiate("unityContainer", "Build/webgl.json");
+      }
     </script>
   </head>
 
@@ -52,11 +64,10 @@
     
     <div class="container-leftover"></div>
     <div class="fader">
-      <div class="container">
+      <div class="webgl-wrapper">
         <div class="webgl-content">
-          <div id="gameContainer" style="width: 256px; height: 240px"></div>
+          <div id="unityContainer" style="width:256px; height: 240px;"></div>
         </div>
-        <script src="TemplateData/responsive.javascript"></script>
       </div>
      
       <div class="container">
