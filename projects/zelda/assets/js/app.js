@@ -3,7 +3,7 @@ var isFullscreen = false;
 // update canvas size
 var refreshCanvas = function(){
   var newWidth = $( ".webgl-content" ).width();
-  var newHeight = (9/16) * newWidth;
+  var newHeight = (256/240) * newWidth;
   $("#unityContainer").width(newWidth);
   $("#unityContainer").height(newHeight);
 };
