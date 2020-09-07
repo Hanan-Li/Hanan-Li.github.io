@@ -1,15 +1,8 @@
 /* demo */
 
-* {
-  font-family: monospace;
-}
 
 
 
-a {
-  color: #ccc;
-  text-decoration: underline;
-}
 
 .info {
   width:100%;
@@ -28,7 +21,7 @@ a {
 }
 
 #unityContainer {
-  width: 62vw; height: calc((9/16)*62vw);
+  width: 62vw; height: calc((256/240)*62vw);
 }
 
 .webgl-content * {
