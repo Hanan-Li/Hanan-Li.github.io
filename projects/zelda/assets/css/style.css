@@ -1,15 +1,3 @@
-/* demo */
-
-
-
-
-
-.info {
-  width:100%;
-  padding:12px;
-  box-sizing: border-box;
-}
-
 /* webgl layout */
 
 .webgl-wrapper {
@@ -33,7 +21,7 @@
 .webgl-content {
   position: relative;
   width: 100%;
-  background: #ccc;
+
 }
 
 #unityContainer canvas{
